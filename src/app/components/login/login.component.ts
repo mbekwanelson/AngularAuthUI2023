@@ -14,13 +14,17 @@ export class LoginComponent implements OnInit {
   loginForm! : FormGroup;
 
 
-  constructor(private formbuilder: FormBuilder) { }
+  constructor(private formbuilder: FormBuilder) {
+
+  }
 
   ngOnInit(): void {
+
     this.loginForm = this.formbuilder.group({
       username : ["",Validators.required],
       password : ["",Validators.required]
-    })
+    });
+
   }
 
   hideOrShowPassword(){

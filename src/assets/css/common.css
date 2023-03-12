@@ -99,3 +99,7 @@ img{
   background-color: #fff;
   padding:0 8px;
 }
+
+small{
+  color: red;
+}

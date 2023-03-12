@@ -15,7 +15,7 @@
                 <!-- User Name-->
 
                 <div class="form-group pt-3">
-                  <div class="input-field">
+                  <div class="input-field" [class.error]="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">
                     <span class="fa fa-user p-2">
 
                     </span>
@@ -27,7 +27,7 @@
                 <!-- Password -->
 
                 <div class="form-group pt-3">
-                  <div class="input-field">
+                  <div class="input-field" [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
                     <span class="fa fa-key p-2">
                     </span>
                     <input formControlName="password" [type]="passwordFieldType" placeholder="Password">
@@ -42,8 +42,13 @@
                   <a id="forget" class="font-weight-bold">Forgot Password</a>
                 </div>
 
-                <!-- Login Button Div-->
-                <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block mt-4 w-100">
+                <!-- Login Button
+                  <button (click)="onSubmit()"  [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block mt-4 w-100">
+                    Login
+                  </button>
+                Div-->
+
+                <button (click)="onSubmit()"  type="submit" class="btn btn-primary btn-block mt-4 w-100">
                   Login
                 </button>
 

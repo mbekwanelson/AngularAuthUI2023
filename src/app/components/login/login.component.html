@@ -31,8 +31,7 @@
                     <span class="fa fa-key p-2">
                     </span>
                     <input formControlName="password" [type]="passwordFieldType" placeholder="Password">
-                    <span (click)="hideOrShowPassword()" class="{{eyeIcon}}" >
-                    </span>
+                    <span (click)="hideOrShowPassword()" class="{{eyeIcon}}"></span>
                   </div>
                 </div>
                 <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</small>
